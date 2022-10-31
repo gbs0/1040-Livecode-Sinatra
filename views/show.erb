@@ -1,0 +1,19 @@
+<div class="container">
+    <h1><%= @restaurant.name %></h1>
+    
+    <% if @restaurant.rating >= 1 %>
+        <% @restaurant.rating.times do %>
+            <small>⭐️</small>
+        <% end %>
+    <% else %>
+        <small>This restaurant doesn't have review yet ):</small>
+    <% end %>
+
+    <h2><%= @restaurant.description %></h2>
+
+    <ul>
+        <li>Adress: <%= @restaurant.address %></li>
+    </ul>
+
+    <a href="/" class="btn btn-secondary">Back</a>
+</div>
